@@ -1,0 +1,225 @@
+$bg_color:#F8F6F6;
+$font_color:#504949;
+
+
+@font-face {
+    font-family: 'Cormorant';
+    src: url('../fonts/Cormorant1.ttf');
+    font-weight: 700;
+}
+
+
+@font-face {
+    font-family: 'Cormorant';
+    src: url('../fonts/Cormorant2.ttf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Cormorant';
+    src: url('../fonts/Cormorant3.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Cormorant';
+    src: url('../fonts/Cormorant4.ttf');
+    font-weight: 600;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+body{
+    font-family: Cormorant;
+    color: $font_color;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.container{
+    max-width: 1170px;
+    margin: 0 auto;
+    @media (max-width: 376px) {
+        max-width: unset;
+        padding: 0 37px;
+    }
+}
+
+
+.header{
+    padding: 20px 0;
+    @media(max-width: 376px){
+        padding: 10px 0;
+    }
+
+    &__burger{
+        display: none;
+        @media(max-width: 376px) {
+            display: block;
+        }
+    }
+
+    &__menu{
+        display: flex;
+        gap: 40px;
+                @media(max-width: 376px) {
+            display: none;
+        }
+}
+
+&__nav{
+    display: flex;
+    justify-content: flex-end;
+}
+
+&__link{
+    font-weight: 400;
+    &__hover{
+        font-weight: 700;
+    }
+}
+}
+
+.main{
+    background-color: $bg_color;
+    padding: 77px 0 122px 0;
+    @media (max-width:376px)
+    {
+       padding: 10px 0;
+    }
+    &__text{
+        &_bold{
+            font-weight:700;
+            margin-left: 107px;
+            margin-bottom: 0;
+            @media (max-width:376px)
+    { 
+        padding: 10px 0;
+    }
+        }
+    }
+
+    &__title{
+        font-weight:600;
+        font-size: 80px;
+        @media(max-width: 376px) {
+            font-size: 40px;
+        }
+
+    }
+
+    &__box{
+        display: flex;
+        gap: 79px;
+    }
+
+    &__info{
+        display: flex;
+        gap: 40px;
+        margin-bottom: 38px;
+        font-size: 40px;
+        margin-bottom: 10px;
+        flex-wrap: wrap;
+        gap: 0;
+        row-gap: 4px;
+        column-gap: 38px;
+        margin-bottom: 45px;
+    }
+
+    &__dig{ 
+       font-size: 50px;
+    }
+
+    &__photo{
+        & img{
+            width: 100%;
+        }
+        @media(max-width: 376px) {
+            font-size: 40px;
+        }
+        
+        &-mobile{
+            display: none;
+            @media(max-width: 376px) {
+                display: block;
+                width: 338px;
+                margin-bottom: 35px;
+                margin-right: -37px;
+            }
+        }
+
+       
+        
+    }
+
+    &__subtitle{
+        font-size: 40px;
+        font-weight: 700;
+        min-width: 517px;
+        margin-bottom: 17px;
+        @media(max-width: 376px) {
+            font-style: 30px;
+            margin-bottom: 24px;
+        }
+    }
+
+    &__item{
+        min-width: 419px;
+        margin-bottom: 10px;
+        @media(max-width: 376px) {
+            min-width: 249;
+        }
+        &__first{
+            display: flex;
+            align-items: flex-end;
+            gap: 23px;
+            &::before{
+                content: '1';
+                font-size: 50px;
+                line-height: 1;
+            }
+        }
+        &__second{
+            display: flex;
+            align-items: flex-end;
+            gap: 23px;
+            &::before{
+                content: '2';
+                font-size: 50px;
+                line-height: 0.8;
+            }
+        }
+        &__third{
+            display: flex;
+            align-items: flex-end;
+            gap: 23px;
+            &::before{
+                content: '3';
+                font-size: 50px;
+                line-height: 0.8;
+            }
+        }
+        &__fourth{
+            display: flex;
+            align-items: flex-end;
+            gap: 23px;
+            &::before{
+                content: '4';
+                font-size: 50px;
+                line-height: 0.8;
+            }
+            } 
+    }
+}
